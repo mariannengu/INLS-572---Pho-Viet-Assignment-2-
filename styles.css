@@ -58,7 +58,7 @@ a {
     height: 100vh;
     background: var(--off-white);
     border-right: 1px solid var(--border-color);
-    padding: 1.5rem 0;
+    padding: 2rem 0 1.5rem 0;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -66,15 +66,15 @@ a {
 }
 
 .logo-container {
-    padding: 0 1rem 1.5rem 1rem;
+    padding: 0 1.5rem 2rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .logo {
     width: 100%;
     height: auto;
-    max-width: 120px;
+    max-width: 180px;
     margin: 0 auto;
     display: block;
     transition: transform 0.3s ease;
@@ -86,29 +86,30 @@ a {
 
 .nav-links {
     list-style: none;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     flex: 1;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
-    padding: 0.75rem 0.75rem;
-    margin-bottom: 0.25rem;
+    padding: 0.65rem 0;
+    margin-bottom: 0.5rem;
     border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: var(--text-medium);
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark);
     transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-number {
-    font-size: 0.75rem;
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 15px;
     color: var(--text-light);
-    margin-right: 0.5rem;
-    font-family: var(--font-body);
-    font-weight: 400;
+    margin-right: 0.35rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
