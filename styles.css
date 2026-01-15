@@ -3,7 +3,7 @@
    ======================================== */
 
 :root {
-    --primary-green: #2d5016;
+    --primary-green: #173313;
     --light-green: #3d6b1f;
     --cream: #f5f3ef;
     --off-white: #fafaf8;
@@ -58,7 +58,7 @@ a {
     height: 100vh;
     background: var(--off-white);
     border-right: 1px solid var(--border-color);
-    padding: 2rem 0 1.5rem 0;
+    padding: 1rem 0 1rem 0;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -66,9 +66,9 @@ a {
 }
 
 .logo-container {
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 1.5rem 1rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .logo {
@@ -93,8 +93,9 @@ a {
 .nav-link {
     display: flex;
     align-items: center;
-    padding: 0.65rem 0;
-    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    margin-bottom: 0.15rem;
     border-radius: 6px;
     font-family: 'Rethink Sans', sans-serif;
     font-size: 15px;
@@ -106,11 +107,13 @@ a {
 
 .nav-number {
     font-family: 'Rethink Sans', sans-serif;
-    font-size: 15px;
+    font-size: 10px;
     color: var(--text-light);
-    margin-right: 0.35rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative;
+    top: -3px;
+    margin-left: 0.25rem;
 }
 
 .nav-link:hover {
@@ -152,6 +155,10 @@ a {
     padding-top: 0;
 }
 
+.section#home {
+    padding-top: 0;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -166,6 +173,10 @@ a {
 .content-wrapper {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 3rem;
+}
+
+.section#home .content-wrapper {
     padding: 3rem;
 }
 
@@ -283,9 +294,11 @@ a {
 
 .testimonials-section {
     margin-top: 5rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
     background: var(--primary-green);
-    padding: 4rem;
-    border-radius: 12px;
+    padding: 4rem 3rem;
+    border-radius: 0;
     position: relative;
 }
 
