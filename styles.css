@@ -411,6 +411,21 @@ a {
     margin-bottom: 4rem;
 }
 
+.menu-category-fullwidth {
+    margin-left: calc(-1 * var(--sidebar-width) - 3rem);
+    margin-right: -3rem;
+    background: var(--primary-green);
+    padding: 3rem 0;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.menu-category-fullwidth .content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem 0 calc(var(--sidebar-width) + 6rem);
+}
+
 .category-title {
     font-family: var(--font-display);
     font-size: 2.5rem;
@@ -528,6 +543,17 @@ a {
     text-align: center;
 }
 
+.menu-pdf-link {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.menu-pdf-link:hover {
+    color: var(--light-green);
+}
+
 /* ========================================
    Gallery Section
    ======================================== */
@@ -535,30 +561,121 @@ a {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .gallery-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gallery-placeholder {
     aspect-ratio: 1;
-    overflow: hidden;
+    background: #e8e8e8;
     border-radius: 8px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1rem;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
+.gallery-caption {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    text-align: left;
 }
 
 /* ========================================
    Dietary Options Section
    ======================================== */
+
+.dietary-intro-text {
+    margin-bottom: 3rem;
+}
+
+.dietary-intro-text p {
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.dietary-intro-text em {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.dietary-section {
+    margin-bottom: 4rem;
+}
+
+.dietary-category-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.dietary-notice {
+    background: var(--cream);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.dietary-notice p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.dietary-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.dietary-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.dietary-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    flex-shrink: 0;
+}
+
+.dietary-item-info {
+    flex: 1;
+}
+
+.dietary-item-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.dietary-item-desc {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.dietary-item-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-style: italic;
+}
 
 .dietary-intro {
     margin-bottom: 3rem;
@@ -608,6 +725,72 @@ a {
 /* ========================================
    FAQ Section
    ======================================== */
+
+.faq-fullwidth {
+    margin-left: calc(-1 * var(--sidebar-width) - 3rem);
+    margin-right: -3rem;
+    background: var(--primary-green);
+    padding: 3rem 0;
+    color: white;
+}
+
+.faq-fullwidth .content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem 0 calc(var(--sidebar-width) + 6rem);
+}
+
+.faq-intro {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.faq-intro p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.faq-image-placeholder {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16/9;
+    background: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
+    font-size: 4rem;
+    color: #2c4a5a;
+    font-weight: 700;
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq-item-white {
+    color: white;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.faq-a {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.7;
+}
+
+.faq-a em {
+    font-style: italic;
+}
 
 .faq-list {
     max-width: 900px;
