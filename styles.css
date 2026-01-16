@@ -14,8 +14,8 @@
     --border-color: #e0e0e0;
     
     --sidebar-width: 200px;
-    --font-display: 'Crimson Text', serif;
-    --font-body: 'Lato', sans-serif;
+    --font-display: 'Rethink Sans', sans-serif;
+    --font-body: 'Rethink Sans', sans-serif;
 }
 
 * {
@@ -297,9 +297,13 @@ a {
     margin-left: -3rem;
     margin-right: -3rem;
     background: var(--primary-green);
-    padding: 4rem 3rem;
+    padding: 2rem 3rem 3rem 3rem;
     border-radius: 0;
     position: relative;
+    width: 1030px;
+    height: 703px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials-title {
@@ -307,35 +311,36 @@ a {
     font-size: 3rem;
     font-weight: 700;
     color: white;
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    flex: 1;
 }
 
 .testimonial-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 0;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+.testimonial-card:hover .testimonial-text,
+.testimonial-card:hover .testimonial-author {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .stars {
     font-size: 1.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 1rem;
+    color: white;
+    margin-bottom: 0.75rem;
     letter-spacing: 4px;
 }
 
@@ -343,13 +348,38 @@ a {
     color: white;
     font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    transition: text-shadow 0.3s ease;
 }
 
 .testimonial-author {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     font-style: italic;
+    transition: text-shadow 0.3s ease;
+}
+
+.review-cta {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.review-button {
+    display: inline-block;
+    background: white;
+    color: var(--primary-green);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.review-button:hover {
+    background: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .review-cta {
@@ -389,6 +419,45 @@ a {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid var(--primary-green);
+}
+
+.category-description {
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.menu-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #e8e8e8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 1rem;
+}
+
+.menu-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .menu-grid {
