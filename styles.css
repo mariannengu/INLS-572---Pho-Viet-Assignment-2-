@@ -978,3 +978,98 @@ address {
         font-size: 2rem;
     }
 }
+/* How to Eat Pho Video Section */
+
+.video-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.video-title {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-green);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+.video-description {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin: 0 auto 1.5rem auto;
+    max-width: 600px;
+}
+
+.video-container {
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.pho-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #000;
+    display: block;
+}
+
+.video-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--primary-green);
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.vid-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.vid-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.vid-progress-wrap {
+    flex: 1;
+    min-width: 80px;
+}
+
+.vid-progress,
+.vid-volume {
+    width: 100%;
+    accent-color: white;
+    cursor: pointer;
+}
+
+.vid-volume {
+    width: 65px;
+}
+
+.vid-time {
+    color: white;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    min-width: 2.5rem;
+    text-align: center;
+}

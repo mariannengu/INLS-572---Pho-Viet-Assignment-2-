@@ -243,6 +243,30 @@
                     </div>
                 </div>
 
+                <!-- How to Eat Pho Video -->
+                <section class="video-section">
+                    <h2 class="video-title">New to Ph&#x1EDF;? Here&rsquo;s How to Eat It</h2>
+                    <p class="video-description">
+                        First time ordering ph&#x1EDF;? No worries! This quick guide walks you through the traditional way to enjoy a bowl &mdash; from adding your fresh garnishes to getting the perfect sip of broth. We want every guest to have the most delicious experience possible.
+                    </p>
+                    <div class="video-container">
+                        <video id="pho-video" class="pho-video" poster="228443-authentic-pho-DDMFS-4x3-0523f6531ccf4dbeb4b5bde52e007b1e.jpg">
+                            <source src="how-to-eat-pho.mp4" type="video/mp4">
+                            <p>Your browser does not support HTML video. <a href="how-to-eat-pho.mp4">Download the video</a>.</p>
+                        </video>
+                        <div class="video-controls">
+                            <button class="vid-btn" id="playPauseBtn" onclick="togglePlay()" aria-label="Play or pause video">&#9654; Play</button>
+                            <div class="vid-progress-wrap">
+                                <input type="range" id="progressBar" class="vid-progress" value="0" min="0" step="0.1" aria-label="Video progress">
+                            </div>
+                            <span class="vid-time" id="vidTime">0:00</span>
+                            <button class="vid-btn" id="muteBtn" onclick="toggleMute()" aria-label="Mute or unmute video">&#128266; Mute</button>
+                            <input type="range" id="volumeBar" class="vid-volume" value="1" min="0" max="1" step="0.05" aria-label="Volume">
+                            <button class="vid-btn" id="fullscreenBtn" onclick="toggleFullscreen()" aria-label="Toggle fullscreen">&#x26F6; Fullscreen</button>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Other Noodle Soups -->
                 <div class="menu-category">
                     <h2 class="cat-title">Bún - Other Noodle Soups</h2>
@@ -881,5 +905,53 @@
             </div>
         </section>
     </main>
+    <script>
+        var video = document.getElementById('pho-video');
+        var playBtn = document.getElementById('playPauseBtn');
+        var progress = document.getElementById('progressBar');
+        var timeDisplay = document.getElementById('vidTime');
+        var muteBtn = document.getElementById('muteBtn');
+        var volumeBar = document.getElementById('volumeBar');
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playBtn.innerHTML = '&#9646;&#9646; Pause';
+            } else {
+                video.pause();
+                playBtn.innerHTML = '&#9654; Play';
+            }
+        }
+
+        function toggleMute() {
+            video.muted = !video.muted;
+            muteBtn.innerHTML = video.muted ? '&#128263; Unmute' : '&#128266; Mute';
+        }
+
+        function toggleFullscreen() {
+            if (video.requestFullscreen) { video.requestFullscreen(); }
+            else if (video.webkitRequestFullscreen) { video.webkitRequestFullscreen(); }
+        }
+
+        video.addEventListener('timeupdate', function () {
+            progress.max = video.duration;
+            progress.value = video.currentTime;
+            var m = Math.floor(video.currentTime / 60);
+            var s = Math.floor(video.currentTime % 60);
+            timeDisplay.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+        });
+
+        progress.addEventListener('input', function () {
+            video.currentTime = progress.value;
+        });
+
+        volumeBar.addEventListener('input', function () {
+            video.volume = volumeBar.value;
+        });
+
+        video.addEventListener('ended', function () {
+            playBtn.innerHTML = '&#9654; Play';
+        });
+    </script>
 </body>
 </html>
